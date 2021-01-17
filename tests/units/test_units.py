@@ -57,7 +57,7 @@ def test_luminosity(): #Function for luminosity units description
         raise AssertionError
 
 
-def test_volume(): #Function for volume units description
+def test_volume(): #Function for volume units test
     if (3 * mm) ** 3 != approx(27 * mm3):
         raise AssertionError
     if (3 * cm) ** 3 != approx(27 * cm3):
