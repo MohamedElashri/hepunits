@@ -13,13 +13,17 @@ from hepunits import mega, micro, yotta, yocto, kibi, tebi
 
 
 def test_prefixes_e6():
-    assert 4 * mega == 1.0 / 0.25 / micro
+    if 4 * mega != 1.0 / 0.25 / micro:
+        raise AssertionError
 
 
 def test_prefixes_e24():
-    assert yotta * yocto == approx(1.0)
+    if yotta * yocto != approx(1.0):
+        raise AssertionError
 
 
 def test_prefixes_binary():
-    assert log(kibi, 2) == 10
-    assert log(tebi, 2) == 40
+    if log(kibi, 2) != 10:
+        raise AssertionError
+    if log(tebi, 2) != 40:
+        raise AssertionError
