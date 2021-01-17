@@ -11,7 +11,7 @@ from hepunits import *
 from hepunits import two_pi
 
 
-def test_length():
+def test_length(): #Function for length units description
     if 3 * mm != approx(m * 0.003):
         raise AssertionError
     if 3 * mm != approx(cm * 0.3):
@@ -28,7 +28,7 @@ def test_length():
         raise AssertionError
 
 
-def test_area():
+def test_area(): #Function for area units description
     if (3 * mm) ** 2 != approx(9 * mm2):
         raise AssertionError
     if (3 * cm) ** 2 != approx(9 * cm2):
@@ -39,7 +39,7 @@ def test_area():
         raise AssertionError
 
 
-def test_crosssection():
+def test_crosssection(): #Function for cross section units description
     if 3e-31 * barn != approx(9 * millibarn):
         raise AssertionError
     if 3e-34 * barn != approx(9 * microbarn):
@@ -52,12 +52,12 @@ def test_crosssection():
         raise AssertionError
 
 
-def test_luminosity():
+def test_luminosity(): #Function for luminosity units description
     if invpb / invfb != approx(1.0e-3):
         raise AssertionError
 
 
-def test_volume():
+def test_volume(): #Function for volume units description
     if (3 * mm) ** 3 != approx(27 * mm3):
         raise AssertionError
     if (3 * cm) ** 3 != approx(27 * cm3):
@@ -66,7 +66,7 @@ def test_volume():
         raise AssertionError
 
 
-def test_time():
+def test_time(): #Function for time units description
     if 3 * ns != approx(3e-9 * s):
         raise AssertionError
     if 3 * ns != approx(3e-6 * ms):
@@ -81,7 +81,7 @@ def test_time():
         raise AssertionError
 
 
-def test_frequency():
+def test_frequency(): #Function for frequency measurnments units description
     if second ** -1 != approx(Hz):
         raise AssertionError
     if 1000 * hertz != approx(kHz):
@@ -92,7 +92,7 @@ def test_frequency():
         raise AssertionError
 
 
-def test_energy():
+def test_energy(): #Function for energy units description
     if 1e3 * eV != approx(keV):
         raise AssertionError
     if 1e6 * eV != approx(MeV):
@@ -107,22 +107,22 @@ def test_energy():
         raise AssertionError
 
 
-def test_angle():
+def test_angle(): #Function for angles description
     if 360.0 * degree != two_pi * radian:
         raise AssertionError
 
 
-def test_magnetic_field():
+def test_magnetic_field(): #Function for magnetic units description
     if 10 * gauss != approx(1 * milli * tesla):
         raise AssertionError
 
 
-def test_electricity():
+def test_electricity(): #Function for electric units description
     if 1 * mega * joule / second != approx(1 * MW):
         raise AssertionError
 
 
-def test_radiation_units():
+def test_radiation_units(): # Function for radiation unit description
     if gray != sievert:
         raise AssertionError
     if 1 * curie != 37 * giga * becquerel:
